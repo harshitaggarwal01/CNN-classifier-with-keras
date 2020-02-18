@@ -11,8 +11,8 @@ from keras.preprocessing import image
 
 img_width, img_height = 150, 150
 
-train_data_dir = 'C:/Users/Anuj/Desktop/python/dataset/training_set'
-validation_data_dir = 'C:/Users/Anuj/Desktop/python/dataset/test_set'
+train_data_dir = 'INPUT PATH HERE' #input path of training dataset which should look like "C:/Users/user/Desktop/dataset/training_set"
+validation_data_dir = 'INPUT PATH HERE' #input path of validation dataset which should look like "C:/Users/user/Desktop/dataset/test_set"
 nb_train_samples = 2000
 nb_validation_samples=200
 epochs=100
@@ -94,7 +94,7 @@ model.fit_generator(
 
 model.save_weights('first_try.h5')
 
-img_pred = image.load_img('C:/Users/Anuj/Desktop/python/lioness.jpg', target_size=(150,150))
+img_pred = image.load_img('INPUT PATH HERE', target_size=(150,150))  #input path of image to be predicted which should look like this "C:/Users/user/Desktop/1.jpg"
 img_pred = image.img_to_array(img_pred)
 img_pred = np.expand_dims(img_pred, axis=0)
 
